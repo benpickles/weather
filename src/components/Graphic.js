@@ -3,21 +3,26 @@ import moment from 'moment'
 import Sky from './Sky'
 import '../css/Graphic.css'
 
-export default ({ period }) =>
-  <div className="Graphic">
-    <div className="Graphic-layer">
-      <Sky />
-    </div>
+export default ({ period }) => {
+  const time = moment.unix(period.dt)
 
-    <div className="Graphic-layer">
-      <div className="Graphic-ground" />
-
-      <div className="Graphic-time">
-        {moment.unix(period.dt).format('HH:mm')}
+  return (
+    <div className="Graphic">
+      <div className="Graphic-layer">
+        <Sky time={time} />
       </div>
 
-      <div className="Graphic-temp">
-        {Math.floor(period.main.temp)}º
+      <div className="Graphic-layer">
+        <div className="Graphic-ground" />
+
+        <div className="Graphic-time">
+          {time.format('HH:mm')}
+        </div>
+
+        <div className="Graphic-temp">
+          {Math.floor(period.main.temp)}º
+        </div>
       </div>
     </div>
-  </div>
+  )
+}
