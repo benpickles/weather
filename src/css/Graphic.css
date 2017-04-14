@@ -1,0 +1,38 @@
+.Graphic {
+  flex-shrink: 0;
+  height: 40vh;
+  position: relative;
+}
+
+.Graphic-ground {
+  background: linear-gradient(to bottom, green, #030);
+  bottom: 0;
+  height: 55px;
+  position: absolute;
+  width: 100%;
+}
+
+.Graphic-layer {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.Graphic-temp {
+  color: white;
+  font-size: 140px;
+  font-weight: bold;
+  letter-spacing: -8px;
+  position: absolute;
+  line-height: 0;
+  text-align: center;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.7);
+  top: 66%;
+  width: 100%;
+}
+
+.Graphic-time {
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+}

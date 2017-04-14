@@ -1,21 +1,54 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Graphic from './components/Graphic'
+import List from './components/List'
 import './App.css';
 
-class App extends Component {
+const URL = 'london.json'
+
+export default class extends Component {
+  state = {
+    data: null,
+    selected: null,
+  }
+
+  componentDidMount() {
+    fetch(URL)
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          data,
+          selected: data.list[0],
+        })
+      })
+  }
+
   render() {
+    if (this.state.data) {
+      return this.renderStuff()
+    } else {
+      return this.renderLoading()
+    }
+  }
+
+  renderLoading() {
+    return (
+      <div>loading</div>
+    )
+  }
+
+  renderStuff() {
+    const {
+      data: {
+        list,
+      },
+      selected,
+    } = this.state
+
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Graphic period={selected} />
+        <List periods={list} />
       </div>
-    );
+    )
   }
 }
-
-export default App;

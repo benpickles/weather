@@ -1,0 +1,18 @@
+.ListDay {
+  background: #ddd;
+  border-top: 1px solid #fff;
+  display: flex;
+}
+
+.ListDay-day {
+  background: #999;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 50px;
+}
+
+.ListDay-periods {
+  flex: 1;
+}

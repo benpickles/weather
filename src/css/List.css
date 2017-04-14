@@ -1,0 +1,7 @@
+.List {
+  height: 100%;
+  overflow-y: auto;
+
+  /* Momentum-based scrolling. */
+  -webkit-overflow-scrolling: touch;
+}
