@@ -12,10 +12,11 @@ export default ({ time }) => {
   return (
     <div className="Sky">
       <div
-        className="Sky-sun"
+        className="Sky-rotating"
         style={{ transform }}
       >
-        <div className="Sky-sun-ball" />
+        <div className="Sky-sun" />
+        <div className="Sky-moon" />
       </div>
     </div>
   )

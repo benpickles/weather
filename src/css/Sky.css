@@ -5,7 +5,18 @@
   width: 100%;
 }
 
-.Sky-sun {
+.Sky-moon {
+  background: radial-gradient(bottom right, circle, #ddd 0%, #666 100%);
+  border-radius: 50%;
+  height: 40px;
+  left: 50%;
+  position: absolute;
+  top: 25%;
+  transform: translate(-20px, -20px);
+  width: 40px;
+}
+
+.Sky-rotating {
   transform-origin: 50% 100%;
   transition: all 1s;
   height: 80%;
@@ -13,8 +24,8 @@
   width: 100%;
 }
 
-.Sky-sun-ball {
-  background: #fc0;
+.Sky-sun {
+  background: radial-gradient(circle, #ff8 0%, #f80 100%);
   border-radius: 50%;
   height: 40px;
   left: 50%;
