@@ -22,6 +22,10 @@ export default class extends Component {
       })
   }
 
+  onSelectPeriod = (selected) => {
+    this.setState({ selected })
+  }
+
   render() {
     if (this.state.data) {
       return this.renderStuff()
@@ -47,7 +51,11 @@ export default class extends Component {
     return (
       <div className="App">
         <Graphic period={selected} />
-        <List periods={list} />
+
+        <List
+          onSelectPeriod={this.onSelectPeriod}
+          periods={list}
+        />
       </div>
     )
   }

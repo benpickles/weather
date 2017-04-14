@@ -4,7 +4,7 @@ import moment from 'moment'
 import ListDay from './ListDay'
 import '../css/List.css'
 
-export default ({ periods }) => {
+export default ({ onSelectPeriod, periods }) => {
   const days = groupBy(periods, period =>
     moment.unix(period.dt).format('YYYY-MM-DD')
   )
@@ -15,6 +15,7 @@ export default ({ periods }) => {
         <ListDay
           date={Date.parse(day)}
           key={day}
+          onSelectPeriod={onSelectPeriod}
           periods={days[day]}
         />
       )}
