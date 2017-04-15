@@ -5,6 +5,14 @@
   width: 100%;
 }
 
+.Sky-dark {
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  position: absolute;
+  transition: opacity 1s;
+  width: 100%;
+}
+
 .Sky-moon {
   background: radial-gradient(bottom right, circle, #ddd 0%, #666 100%);
   border-radius: 50%;
@@ -18,7 +26,7 @@
 
 .Sky-rotating {
   transform-origin: 50% 100%;
-  transition: all 1s;
+  transition: transform 1s;
   height: 80%;
   position: relative;
   width: 100%;
