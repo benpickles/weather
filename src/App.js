@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment'
 import Graphic from './components/Graphic'
 import List from './components/List'
 import './App.css';
@@ -17,9 +18,13 @@ export default class extends Component {
     fetch(URL)
       .then(response => response.json())
       .then(data => {
+        const first = data.list[0]
+        const initialDate = moment.unix(first.dt).startOf('day')
+
         this.setState({
           data,
-          selected: data.list[0],
+          initialDate,
+          selected: first,
         })
       })
   }
@@ -47,12 +52,16 @@ export default class extends Component {
       data: {
         list,
       },
+      initialDate,
       selected,
     } = this.state
 
     return (
       <div className="App">
-        <Graphic period={selected} />
+        <Graphic
+          initialDate={initialDate}
+          period={selected}
+        />
 
         <List
           onSelectPeriod={this.onSelectPeriod}

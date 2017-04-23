@@ -3,13 +3,16 @@ import moment from 'moment'
 import Sky from './Sky'
 import '../css/Graphic.css'
 
-export default ({ period }) => {
+export default ({ initialDate, period }) => {
   const time = moment.unix(period.dt)
 
   return (
     <div className="Graphic">
       <div className="Graphic-layer">
-        <Sky time={time} />
+        <Sky
+          initialDate={initialDate}
+          time={time}
+        />
       </div>
 
       <div className="Graphic-layer">

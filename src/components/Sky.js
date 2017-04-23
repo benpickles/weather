@@ -5,7 +5,7 @@ const MINS_IN_DAY = 60 * 24
 const MORNING = 60 * 6
 const NIGHT = 60 * 18
 
-export default ({ time }) => {
+export default ({ initialDate, time }) => {
   const mins = (time.hours() * 60) + time.minutes()
 
   let opacity
@@ -19,7 +19,8 @@ export default ({ time }) => {
   }
 
   const percentThroughDay = mins / MINS_IN_DAY
-  const degreesThroughDay = Math.round(percentThroughDay * 360)
+  const diffDays = Math.floor(time.diff(initialDate, 'hours') / 24)
+  const degreesThroughDay = Math.round(percentThroughDay * 360) + (diffDays * 360)
   const transform = `rotate(-${degreesThroughDay}deg)`
 
   return (

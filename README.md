@@ -8,7 +8,6 @@ A little React app using [Create React App](https://github.com/facebookincubator
 
 - Fix times: I'm guessing they should be 00:00, 03:00, 06:00 etc instead of 01:00, 04:00, 07:00 etc.
 - Show rain, wind, and cloud (and snow etc).
-- Fix the sun/moon appearing to go back in time when moving forward through days.
 - Drive the time/date selection by scrolling the list.
 - Replace placeholder graphics.
 - Choose a city/lat-lon/etc.
