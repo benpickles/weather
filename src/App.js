@@ -3,7 +3,9 @@ import Graphic from './components/Graphic'
 import List from './components/List'
 import './App.css';
 
-const URL = 'london.json'
+const APP_ID = 'ca8a6690af1723589f013d38854a4863'
+const CITY_ID = 2643743
+const URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${APP_ID}&id=${CITY_ID}&units=metric`
 
 export default class extends Component {
   state = {
