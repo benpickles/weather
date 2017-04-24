@@ -2,7 +2,7 @@
 
 A little React app using [Create React App](https://github.com/facebookincubator/create-react-app) to show London's weather from the [OpenWeatherMap 5 day weather forecast API](http://openweathermap.org/forecast5).
 
-[View the app](http://benpickles.github.io/weather/).
+[View the app](http://enigmatic-dusk-76283.herokuapp.com/).
 
 ## TODO
 
@@ -29,8 +29,8 @@ $ yarn start
 
 ## Deployment
 
-Deploy to GitHub Pages by running:
+Deploy to Heroku by receiving access to the Heroku app and running:
 
 ```
-$ yarn run deploy
+$ git push heroku
 ```
