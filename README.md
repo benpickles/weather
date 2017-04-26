@@ -1,5 +1,7 @@
 # Weather
 
+[![Build Status](https://travis-ci.org/benpickles/weather.svg?branch=master)](https://travis-ci.org/benpickles/weather)
+
 A little React app using [Create React App](https://github.com/facebookincubator/create-react-app) to show London's weather from the [OpenWeatherMap 5 day weather forecast API](http://openweathermap.org/forecast5).
 
 [View the app](http://enigmatic-dusk-76283.herokuapp.com/).
